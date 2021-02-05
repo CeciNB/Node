@@ -1,3 +1,9 @@
+# .vscode
+.vscode
+
+# Prettier
+.prettierrc
+
 # Logs
 logs
 *.log
