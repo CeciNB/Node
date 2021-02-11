@@ -7,11 +7,6 @@ const letters = ['a', 'b', 'c']
 // show b in the console
 
 console.log(letters[1])
-//or
-for (let i = 0; i < letters.length; i++) {
-  if ((letters[i] = 'b')) console.log(letters[i])
-  break
-}
 
 // --------------------------------------
 // Exercise 2 - Array Positioning
@@ -54,15 +49,15 @@ console.log(diet)
 // Remove the LAST element of the array.
 // Don't remove by index. You know in advance that it's the last in the array because you are too full already.
 
-// array = stack
+// js array is a stack
 diet.pop()
 console.log(diet)
 // --------------------------------------
 // Exercise 6 - Copy array
 
 // You really like your daily diet from last exercise. Copy it to a new array called dinnerTray so you can give it to a friend.
-const dietClone = [...diet]
-console.log(dietClone)
+const dinnerTray = [...diet]
+console.log(dinnerTray)
 
 // --------------------------------------
 // Exercise 7 - For loop
@@ -71,7 +66,7 @@ const lettersExpanded = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
 
 // log every second char in the array starting from b
 
-console.log(lettersExpanded.filter((x, i) => i % 2))
+console.log(lettersExpanded.filter((i) => i % 2))
 //or
 for (let i = 0; i < lettersExpanded.length; i++) {
   if (i % 2 != 0) {
