@@ -22,7 +22,7 @@ app.get('/time', (req, res) => {
 });
 
 app.get('/day', (req, res) => {
-    const day = new Date().getDay();
+    const day = new Date().getDate();
     console.log(day);
     res.send(`The day is now: ${day}`);
 });
