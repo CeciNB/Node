@@ -18,7 +18,7 @@ app.get('/', (req, res) => {
 app.get('/time', (req, res) => {
     const time = new Date().toLocaleTimeString();
     console.log(time);
-    res.send(`The time is now: ${time}`);
+    res.send({ time: time });
 });
 
 app.get('/day', (req, res) => {
@@ -26,6 +26,20 @@ app.get('/day', (req, res) => {
     console.log(day);
     res.send(`The day is now: ${day}`);
 });
+
+app.get('/about', (req, res) => {
+    res.send({
+        version: 'v1.0.0',
+    });
+});
+
+app.get('/page', (req, res) => {
+    res.send('<h1>Welcome</h1>');
+});
+
+/*
+
+*/
 
 app.get('/month', (req, res) => {
     const month = new Date().toLocaleDateString('default', { month: 'long' });
