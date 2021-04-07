@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cat facts</title>
+    </head>
+    <body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            // https://cat-fact.herokuapp.com/facts/random
+            // todo: use Ajax in jQuery that we included above to call cat facts through the URL above
+            /*function getFactById() {
+                $.get(
+                    `https://cat-fact.herokuapp.com/facts/random/${id}`,
+                    (data) => {
+                        console.log(data.text)
+                        $('#fact').text(data.text)
+                    },
+                )
+            }
+            function getFactById() {
+                $.get(
+                    `https://cat-fact.herokuapp.com/facts/random/?amount=500`,
+                    (data) => {
+                        console.log(data.text)
+                        const catDiv = document.getElementById('fact')
+                        data.map((fact) => {
+                            catPara.innerText(fact.text)
+                        })
+                    },
+                )
+            }
+            getFactById()*/ $
+
+            //fetch('/pub').then((response) => response.json())
+
+            async function catFactAsync() {
+                try {
+                    const cat = await fetch(
+                        'https://cat-fact.herokuapp.com/facts/random',
+                    ) console.log('message')
+                } catch (error) {
+                    console.log('error', error)
+                }
+            }
+            catFactAsync()
+        </script>
+        <div id="factDiv"></div>
+    </body>
+</html>
