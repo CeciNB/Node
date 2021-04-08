@@ -39,6 +39,13 @@ app.get('/proxy', async (req, res) => {
         res.send({ error: error })
     }
 })
+//or
+app.get('/proxy2', (req, res) => {
+    fetch('https://google.com/')
+        .then((response) => response.text())
+        .then((body) => res.send(body))
+        .catch((error) => res.send({ error: error }))
+})
 
 const server = app.listen(port, (error) => {
     if (error) throw error
